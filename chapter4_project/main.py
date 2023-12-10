@@ -18,7 +18,7 @@ def get_db():
 
 @app.get("/")
 async def root():
-    return {"message": "API health check successful"}        
+    return {"message": "API health check successful - booyah!"}        
 
 @app.get("/v0/players/", response_model=list[schemas.Player])
 def read_players(skip: int = 0, limit: int = 100, db: Session = Depends(get_db)):
